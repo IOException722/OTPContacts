@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">OTP CONTACT</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment_sent">Sent list</string>
+    <string name="contact">Contacts</string>
+    <string name="sent">Sent</string>
+    <string name="sendmsg">Send Message</string>
+    <string name="sendmsgcaps">SEND MESSAGE</string>
+    <string name="send">SEND</string>
+    <string name="smstext">Hi, Your OTP is:</string>
+</resources>
