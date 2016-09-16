@@ -93,7 +93,6 @@ public class Compose extends AppCompatActivity implements View.OnClickListener{
                     @Override
                     public void onResponse(String response) {
                         Log.e("Asciisuccess",""+response);
-
                     }
                 }, new Response.ErrorListener() {
             @Override
