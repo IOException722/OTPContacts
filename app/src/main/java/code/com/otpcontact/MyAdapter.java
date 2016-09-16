@@ -16,6 +16,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>  {
     private ArrayList<Contacts> contactsArrayList;
     private int tabselected;
     private Context context;
+    public MyAdapter()
+    {
+
+    }
     public MyAdapter(ArrayList<Contacts> contactArrayList,int position, Context ctx)
     {
         this.contactsArrayList = contactArrayList;

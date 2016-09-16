@@ -2,23 +2,26 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="code.com.otpcontact">
 
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.Example">
-        <activity android:name="code.com.com.otpcontact.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="code.com.com.otpcontact.TabPager" />
-        <activity android:name="code.com.com.otpcontact.MyAdapter" />
-        <activity android:name="code.com.com.otpcontact.ContactInfo" />
-        <activity android:name="code.com.com.otpcontact.Compose"></activity>
+        <activity android:name=".TabPager" />
+        <activity android:name=".MyAdapter" />
+        <activity android:name=".ContactInfo" />
+        <activity android:name=".Compose" />
     </application>
 
 </manifest>

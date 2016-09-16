@@ -1,7 +1,11 @@
 package code.com.otpcontact;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,6 +23,20 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getActionBarToolbar();
+        int permissionCheck1 = ContextCompat.checkSelfPermission(this,
+                Manifest.permission.INTERNET);
+        if(permissionCheck1 == PackageManager.PERMISSION_DENIED)
+        {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.INTERNET}, 1);
+        }
+
+        int permissionCheck2 = ContextCompat.checkSelfPermission(this,
+                Manifest.permission.READ_SMS);
+        if(permissionCheck2 == PackageManager.PERMISSION_DENIED)
+        {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_SMS}, 1);
+        }
+
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         tabLayout.addTab(tabLayout.newTab().setText("CONTACTS"));
         tabLayout.addTab(tabLayout.newTab().setText("SENT"));
